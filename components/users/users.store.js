@@ -6,4 +6,9 @@ async function add(user) {
   return userSaved;
 }
 
-module.exports = { add };
+async function list(filter) {
+  const users = await UserModel.find(filter);
+  return users;
+}
+
+module.exports = { add, list };
