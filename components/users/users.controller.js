@@ -10,7 +10,7 @@ async function addUser(newUser) {
   const encryptPassword = bcryptjs.hashSync(password, salt);
   const user = { name, cellphone, email, password: encryptPassword };
   const userSaved = await userStore.add(user);
-  return { _id: userSaved._id };
+  return { userId: userSaved._id, email: userSaved.email };
 }
 
 module.exports = {
