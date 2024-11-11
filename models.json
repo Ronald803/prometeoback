@@ -1,0 +1,64 @@
+{
+  "_id": "67282963214c7fece7f3bde5",
+  "question": "¿Cuál de las siguientes afirmaciones define mejor lo que estudia la biología?",
+  "correctAnswerId": "67282963214c7fece7f3bde6",
+  "answers": [
+    {
+      "answer": "La biología estudia las interacciones entre los elementos químicos en los seres vivos.",
+      "justification": "Aunque la bioquímica es parte de la biología, no es la definición general de la biología.",
+      "_id": "67282963214c7fece7f3bde7"
+    },
+    {
+      "answer": "La biología se centra únicamente en el estudio de los animales.",
+      "justification": "La biología no se limita solo a los animales, también estudia plantas, microorganismos y otros seres vivos.",
+      "_id": "67282963214c7fece7f3bde8"
+    },
+    {
+      "answer": "La biología solo estudia los aspectos celulares de los seres vivos.",
+      "justification": "La biología no solo estudia las células, eso es un área específica llamada citología.",
+      "_id": "67282963214c7fece7f3bde9"
+    },
+    {
+      "answer": "La biología se dedica exclusivamente al análisis de las relaciones ecológicas.",
+      "justification": "Aunque la ecología es una rama importante, no abarca todo lo que estudia la biología.",
+      "_id": "67282963214c7fece7f3bdea"
+    },
+    {
+      "answer": "La biología estudia las leyes de la vida y los organismos en todas sus formas y funciones.",
+      "justification": "La biología abarca un campo amplio de estudio, incluyendo la morfología, fisiología, genética, anatomía, citología, zoología, botánica, entre otros, lo que permite estudiar a los organismos en su totalidad.",
+      "_id": "67282963214c7fece7f3bde6"
+    }
+  ],
+  "topicId": "67282963214c7fece7f3b000",
+  "__v": 0
+}
+
+// Career
+  {
+    "_id": "67282963214c7fece7f3b001",
+    "name": "Medicina",
+    "subjects": [
+      "Biología",
+    ]
+  }
+// Topic
+  {
+    "_id": "67282963214c7fece7f3b000",
+    "name": "Generalidades e importancia de su estudio",
+    "bookName": "Texto para la prueba de suficiencia académica 2023",
+    "page": 10,
+    "subjectId": "67282963214c7fece7f3b002",
+  }
+// Subject
+{
+  "_id": "67282963214c7fece7f3b003",
+  "name": "Biología",
+  "careerId": "67282963214c7fece7f3b001",
+}
+
+// Registro in every question
+{
+  "userId": "67282963214c7fece7f3b004",
+  "questionId": "67282963214c7fece7f3b005",
+  "IsCorrect": false,
+}
