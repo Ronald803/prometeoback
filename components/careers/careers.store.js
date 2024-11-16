@@ -7,7 +7,7 @@ async function add(career) {
 }
 
 async function list(filter) {
-  const careers = await CareerModel.find(filter);
+  const careers = await CareerModel.find(filter).populate("subjects");
   return careers;
 }
 

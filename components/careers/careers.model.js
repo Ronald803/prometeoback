@@ -8,7 +8,7 @@ const careerSchema = new Schema({
     required: [true, "Name is required"],
   },
   subjects: {
-    type: [String],
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Subjects" }],
     default: [],
   },
 });
