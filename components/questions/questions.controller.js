@@ -22,7 +22,20 @@ async function addQuestion(newQuestion) {
 
 async function getQuestions(filter) {
   const questions = await questionStore.list(filter);
-  return questions;
+  const structuredQuestions = questions.map((singleQuestion) => {
+    return {
+      question: singleQuestion.question,
+      correctAnswerId: singleQuestion.correctAnswer._id,
+      answers: [
+        singleQuestion.correctAnswer,
+        ...singleQuestion.incorrectAnswers,
+      ],
+      topic: singleQuestion.topicId.name,
+      subject: singleQuestion.topicId.subjectId.name,
+      career: singleQuestion.topicId.subjectId.careerId.name,
+    };
+  });
+  return structuredQuestions;
 }
 
 module.exports = {
