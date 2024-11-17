@@ -7,7 +7,15 @@ async function add(question) {
 }
 
 async function list(filter) {
-  const questions = await QuestionModel.find(filter);
+  const questions = await QuestionModel.find(filter).populate({
+    path: "topicId",
+    populate: {
+      path: "subjectId",
+      populate: {
+        path: "careerId",
+      },
+    },
+  });
   return questions;
 }
 

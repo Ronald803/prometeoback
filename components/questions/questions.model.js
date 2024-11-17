@@ -20,13 +20,9 @@ const questionSchema = new Schema({
   },
   correctAnswer: answerSchema,
   incorrectAnswers: [answerSchema],
-  subject: {
-    type: String,
-    required: [true, "Subject is required"],
-  },
-  topic: {
-    type: String,
-    required: [true, "Topic is required"],
+  topicId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Topics",
   },
 });
 

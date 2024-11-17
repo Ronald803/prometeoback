@@ -5,18 +5,16 @@ async function addQuestion(newQuestion) {
     question: query,
     correctAnswer,
     incorrectAnswers,
-    subject,
-    topic,
+    topicId,
   } = newQuestion;
-  if (!query || !correctAnswer || !incorrectAnswers || !subject || !topic) {
+  if (!query || !correctAnswer || !incorrectAnswers || !topicId) {
     throw new Error("Incomplete Data");
   }
   const question = {
     question: query,
     correctAnswer,
     incorrectAnswers,
-    subject,
-    topic,
+    topicId,
   };
   const questionSaved = await questionStore.add(question);
   return { questionId: questionSaved._id };
